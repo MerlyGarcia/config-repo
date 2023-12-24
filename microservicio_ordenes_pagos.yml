@@ -1,0 +1,22 @@
+server:
+  port: 8093
+config:
+  base:
+    endpoint:
+      usuario: http://localhost:8088/usuario
+      carrito: http://localhost:8091/carrito
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/proyecto_orden
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: "localhost:9092"
+      bindings:
+        topic:
+          destination: proyecto_topic
+          producer:
+            requiredGroups: $Default
+

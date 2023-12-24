@@ -1,0 +1,11 @@
+server:
+  port: 8091
+
+config:
+  base:
+    endpoint: http://localhost:8090/producto
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/proyecto_carrito
