@@ -1,8 +1,8 @@
 config:
   base:
     endpoint:
-      usuario: http://localhost:8088/usuario
-      carrito: http://localhost:8091/carrito
+      usuario: http://microservicio_usuario/usuario
+      carrito: http://microservicio_carrito_compras/carrito
 spring:
   data:
     mongodb:
