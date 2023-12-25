@@ -2,8 +2,3 @@ spring:
   data:
     mongodb:
       uri: mongodb://localhost:27017/proyecto_productos
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka
