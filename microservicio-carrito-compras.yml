@@ -1,6 +1,6 @@
 config:
   base:
-    endpoint: http://microservicio-producto/producto
+    endpoint: http://microservicio-gateway/api/producto
 
 spring:
   data:
