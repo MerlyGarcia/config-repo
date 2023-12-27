@@ -1,0 +1,28 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: microservicio-producto
+          uri: lb://microservicio-producto
+          predicates: Path=/api/producto/**
+          filters: StripPrefix=2
+        - id: microservicio-usuario
+          uri: lb://microservicio-usuario
+          predicates: Path=/api/usuario/**
+          filters: StripPrefix=2
+        - id: microservicio-carrito-compras
+          uri: lb://microservicio-carrito-compras
+          predicates: Path=/api/carrito/**
+          filters: StripPrefix=2
+        - id: microservicio-ordenes-pagos
+          uri: lb://microservicio-ordenes-pagos
+          predicates: Path=/api/orden/**
+          filters: StripPrefix=2
+    loadbalancer:
+      ribbon:
+        enabled: false
